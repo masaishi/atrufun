@@ -25,7 +25,7 @@ if ARGV[0] == nil
 
   loop do
     db = SQLite3::Database.new("reservation.db")
-    timeNow =  conversion_time(Time.now.strftime('%F %R'))
+    time_now =  conversion_time(Time.now.strftime('%F %R'))
     datas = db.execute("SELECT * from reservation;")
     print datas + "\n"
     will_do = []
