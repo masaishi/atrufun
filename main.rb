@@ -39,7 +39,7 @@ if ARGV[0] == nil
       if time_now >= conversion_time(data[1])
         `ruby main.rb do #{data[0]} &`
         db.execute("DELETE from reservation where id = #{data[0]};")
-      end  
+      end
     end
     puts "\n"
 
